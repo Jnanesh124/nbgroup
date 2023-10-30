@@ -84,11 +84,11 @@ async def f_sub_callback(bot, update):
                                       permissions=ChatPermissions(can_send_messages=True,
                                                                   can_send_media_messages=True,
                                                                   can_send_other_messages=True))
-       await update.message.delete()
+       await update.message.delete(30)
     else:
        await bot.restrict_chat_member(chat_id=update.message.chat.id, 
                                       user_id=user_id,
                                       permissions=ChatPermissions(can_send_messages=True,
                                                                   can_send_media_messages=True,
                                                                   can_send_other_messages=True))
-       await update.message.delete()
+       await update.message.delete(30)
