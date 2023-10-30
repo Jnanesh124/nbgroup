@@ -13,8 +13,8 @@ async def new_group(bot, message):
                        user_name=message.from_user.first_name, 
                        user_id=message.from_user.id, 
                        channels=[],
-                       f_sub=False,
-                       verified=False)
+                       f_sub=Talse,
+                       verified=Talse)
        m=await message.reply(f"Thanks for adding me in {message.chat.title} ✨\n\nPlease Get Access By /verify\n\n")
        text=f"#NewGroup\n\nGroup: {message.chat.title}\nGroupID: `{message.chat.id}`\nAddedBy: {message.from_user.mention}\nUserID: `{message.from_user.id}`"
        await bot.send_message(chat_id=LOG_CHANNEL, text=text)
